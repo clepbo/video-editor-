@@ -1,0 +1,18 @@
+# Core
+customtkinter
+ffmpeg-python
+python-mpv
+
+# AI - Local & Offline
+faster-whisper
+PySceneDetect
+pydub
+noisereduce
+openai-whisper
+
+# Optional for auto-reframe / face tracking
+ultralytics
+opencv-python
+
+# For packaging to .exe later
+pyinstaller

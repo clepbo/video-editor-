@@ -1,0 +1,35 @@
+# Core Video Editor PRO Requirements
+# Install with: pip install -r requirements_full.txt
+
+# GUI
+customtkinter>=5.2.0
+
+# Video Processing
+ffmpeg-python>=0.2.0
+opencv-python>=4.8.0
+python-mpv>=1.0.4
+
+# AI - Transcription
+faster-whisper>=0.9.0
+openai-whisper>=20231117
+
+# AI - Embeddings & Style Learning
+sentence-transformers>=2.2.2
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# AI - Face Tracking & Vision
+ultralytics>=8.0.0
+# For better face detection, also download yolov8n-face.pt manually
+
+# AI - Audio Analysis
+librosa>=0.10.0
+pydub>=0.25.1
+noisereduce>=3.0.0
+
+# Utils
+PySceneDetect>=0.6.2
+tqdm>=4.66.0
+
+# Optional - For packaging to .exe
+# pyinstaller>=6.0.0
