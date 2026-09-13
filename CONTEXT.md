@@ -2,11 +2,11 @@
 
 This file tracks the evolution of this project. The agent will always update this context on every change.
 
-## Current State (2026-09-13)
+## Current State (2026-09-13 21:42 UTC)
 
 **Goal:** Private, local, trainable video editor for desktop that learns YOUR viral style.
 
-**Status:** ✅ Initial PRO version pushed
+**Status:** ✅ PRO version + Auto EXE Build Action added
 
 **Implemented Features:**
 1. ✅ Trainable Viral AI Engine (`trainable_viral_engine.py`)
@@ -33,15 +33,28 @@ This file tracks the evolution of this project. The agent will always update thi
    - 4 Tabs: Teach, Single, Batch, Settings
    - Color grading, audio normalize, silence removal
 
+6. ✅ GitHub Actions Auto-Build (.github/workflows/build-exe.yml)
+   - Triggers on every push to main
+   - Builds ViralEditorPro.exe (GUI) + ViralBatchCLI.exe (CLI)
+   - Uploads as artifact (30 days retention)
+   - Auto-release on git tag
+   - Download from: Actions tab -> Latest run -> Artifacts
+
 **Tech Stack:**
 - Python 3.10+, CustomTkinter, FFmpeg
 - faster-whisper, sentence-transformers, ultralytics, opencv
+- PyInstaller for EXE
+
+**Build Instructions:**
+- Local: `pyinstaller --onefile --windowed starter-app/viral_editor_pro.py`
+- GitHub: Push to main, wait 8-12 min, download artifact from Actions
 
 **Next Planned:**
 - [ ] Auto B-roll insertion
 - [ ] Voice cloning for dubbing
 - [ ] Auto chapter detection
-- [ ] Export to .exe with PyInstaller
+- [ ] Reduce EXE size (currently ~600MB)
 
 **Repo:** https://github.com/clepbo/video-editor-
-**Last Updated:** 2026-09-13 21:30 UTC
+**Actions:** https://github.com/clepbo/video-editor-/actions
+**Last Updated:** 2026-09-13 21:42 UTC
