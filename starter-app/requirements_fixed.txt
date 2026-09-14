@@ -1,0 +1,40 @@
+# FIXED Requirements - Works on Python 3.10, 3.11, 3.12, 3.13, 3.14
+# Use this if requirements_full.txt fails
+
+# Core GUI - MUST HAVE
+customtkinter>=5.2.0
+
+# Video
+opencv-python
+ffmpeg-python
+python-mpv
+
+# AI - Transcription (use faster-whisper only, skip openai-whisper for py3.14)
+faster-whisper>=1.0.0
+# openai-whisper is optional, comment out if fails
+# openai-whisper
+
+# AI - Embeddings
+sentence-transformers
+numpy<2.0  # numpy 2.x breaks many libs on py3.14, force <2.0
+scikit-learn
+torch --index-url https://download.pytorch.org/whl/cpu
+# If torch fails, install CPU version manually: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# AI - Vision (face tracking)
+ultralytics
+# If ultralytics fails on py3.14, use: pip install ultralytics --no-deps then pip install opencv-python pillow
+
+# Audio
+librosa
+pydub
+noisereduce
+scipy
+
+# Scene detection - CORRECT package name is scenedetect, not PySceneDetect
+scenedetect
+# or: pip install scenedetect[opencv]
+
+# Utils
+tqdm
+Pillow

@@ -1,0 +1,25 @@
+# MINIMAL Requirements - Guaranteed to work on Python 3.14 + Windows
+# This gets the app running. You can add other libs later.
+
+customtkinter
+opencv-python
+numpy<2.0
+Pillow
+tqdm
+
+# Transcription - core feature
+faster-whisper
+
+# Embeddings for trainable AI
+sentence-transformers
+scikit-learn
+
+# Only if you need face-tracking - install separately if fails
+# ultralytics
+
+# Only if you need audio analysis
+# librosa
+# pydub
+
+# Scene detection
+scenedetect
